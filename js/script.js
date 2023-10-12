@@ -66,14 +66,30 @@ document.getElementById("odd-even-check").addEventListener("click", function () 
 // FUNCTIONS
 
 // Palindrome Check Function
+// function isPalindrome(stringToCheck) {
+//     const stringLowerCase = stringToCheck.toLowerCase()
+//     for (i = 0; i < stringLowerCase.length; i++) {
+//         if (stringLowerCase[i] !== stringLowerCase[(stringLowerCase.length - 1) - i]) {
+//             return false
+//         }
+//     }
+//     return true
+// }
+
+// Palindrome Check Optimal Function
 function isPalindrome(stringToCheck) {
     const stringLowerCase = stringToCheck.toLowerCase()
-    for (i = 0; i < stringLowerCase.length; i++) {
-        if (stringLowerCase[i] !== stringLowerCase[(stringLowerCase.length - 1) - i]) {
-            return false
-        }
+    const stringMinLength = Math.floor(stringLowerCase.length / 2)
+    let charNum = 0
+
+    while (charNum < stringMinLength && stringLowerCase[charNum] 
+        === stringLowerCase[(stringLowerCase.length - 1) - charNum]) {
+            
+        charNum++
     }
-    return true
+
+    if (stringMinLength === charNum) { return true }
+    return false
 }
 
 // Generate Random number 
