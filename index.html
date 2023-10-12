@@ -39,18 +39,33 @@
 
             <h1 class="display-6 text-uppercase text-center">Odd Even Game</h1>
 
-            <div class="d-flex justify-content-center align-items-center gap-3 my-5">
+            <div class="row my-5 row-gap-3 gx-3">
 
-                <input class="form-control" id="user-number-input" type="text" placeholder="Enter number from 1 and 5">
+                <div class="col- col-md-6">
+                    <input class="form-control" id="user-number-input" type="text"
+                        placeholder="Enter number from 1 and 5">
+                </div>
 
-                <select class="form-select" id="user-odd-even-select" style="width: min-content;">
-                    <option value="1">odd</option>
-                    <option value="0">even</option>
-                </select>
+                <div class="col-4 col-md">
+                    <select class="form-select" id="user-odd-even-select">
+                        <option value="1">odd</option>
+                        <option value="0">even</option>
+                    </select>
+                </div>
 
-                <input class="form-control bg-white" id="computer-number-form" type="text" placeholder="CPU Number" disabled>
+                <div class="col-4 col-md">
+                    <input class="form-control bg-white" id="computer-number-form" type="text" placeholder="CPU Number"
+                        disabled>
+                </div>
 
-                <button class="btn btn-outline-light px-4" id="odd-even-check">Play</button>
+                <div class="col-4 col-md">
+                    <button class="btn btn-outline-light w-100" id="odd-even-check">Play</button>
+                </div>
+
+
+
+
+
 
             </div>
 
