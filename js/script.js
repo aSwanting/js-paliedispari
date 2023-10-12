@@ -16,8 +16,8 @@ document.getElementById("palindrome-check").addEventListener("click", function (
 
         userString.classList.remove("is-invalid")
 
-        isPalindrome(userString.value) ? palindromeResult.innerHTML = "Word is a Palindrome!"
-            : palindromeResult.innerHTML = "Word is not a Palindrome!"
+        isPalindrome(userString.value) ? palindromeResult.innerHTML = `"` + userString.value + `"` + " is a palindrome"
+            : palindromeResult.innerHTML = `"` + userString.value + `"` + " is not a palindrome"
 
     }
 
@@ -41,7 +41,7 @@ document.getElementById("odd-even-check").addEventListener("click", function () 
 
         userNumberForm.classList.add("is-invalid")
 
-    } else if (userNumber > 5) { 
+    } else if (userNumber > 5) {
 
         userNumberForm.classList.add("is-invalid")
 
@@ -54,10 +54,10 @@ document.getElementById("odd-even-check").addEventListener("click", function () 
 
         console.log(userNumber, computerNumber, userOddEvenSelect)
 
-/*         isNumberSumOdd(userNumber, computerNumber) ? console.log(true) : console.log(false)
-        userOddEvenSelect ? console.log(true) : console.log(false) */
+        /*         isNumberSumOdd(userNumber, computerNumber) ? console.log(true) : console.log(false)
+                userOddEvenSelect ? console.log(true) : console.log(false) */
 
-        isNumberSumOdd(userNumber, computerNumber) === userOddEvenSelect ? oddEvenResult.innerHTML = "User Wins!" : oddEvenResult.innerHTML = "User Loses!" 
+        isNumberSumOdd(userNumber, computerNumber) === userOddEvenSelect ? oddEvenResult.innerHTML = "User Wins!" : oddEvenResult.innerHTML = "User Loses!"
     }
 
 })
