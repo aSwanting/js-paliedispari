@@ -52,11 +52,6 @@ document.getElementById("odd-even-check").addEventListener("click", function () 
         userNumberForm.classList.remove("is-invalid")
         computerNumberForm.value = computerNumber
 
-        console.log(userNumber, computerNumber, userOddEvenSelect)
-
-        /*         isNumberSumOdd(userNumber, computerNumber) ? console.log(true) : console.log(false)
-                userOddEvenSelect ? console.log(true) : console.log(false) */
-
         isNumberSumOdd(userNumber, computerNumber) === userOddEvenSelect ? oddEvenResult.innerHTML = "User Wins!" : oddEvenResult.innerHTML = "User Loses!"
     }
 
@@ -64,17 +59,6 @@ document.getElementById("odd-even-check").addEventListener("click", function () 
 
 
 // FUNCTIONS
-
-// Palindrome Check Function
-// function isPalindrome(stringToCheck) {
-//     const stringLowerCase = stringToCheck.toLowerCase()
-//     for (i = 0; i < stringLowerCase.length; i++) {
-//         if (stringLowerCase[i] !== stringLowerCase[(stringLowerCase.length - 1) - i]) {
-//             return false
-//         }
-//     }
-//     return true
-// }
 
 // Palindrome Check Optimal Function
 function isPalindrome(stringToCheck) {
@@ -94,9 +78,9 @@ function isPalindrome(stringToCheck) {
 
 // Generate Random number 
 function getRandomIntInclusive(min, max) {
-    min = Math.ceil(min);
-    max = Math.floor(max);
-    return Math.floor(Math.random() * (max - min + 1) + min); // The maximum is inclusive and the minimum is inclusive
+    min = Math.ceil(min)
+    max = Math.floor(max)
+    return Math.floor(Math.random() * (max - min + 1) + min)
 }
 
 
