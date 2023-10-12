@@ -17,18 +17,40 @@
 
     <main>
 
-        <div class="container border rounded-3 p-4 my-5">
+        <!-- Palindrome Game -->
+        <div class="container rounded-5 p-5 my-5 shadow">
 
             <h1 class="display-6 text-uppercase text-center">Palindrome Check</h1>
 
-            <div class="d-flex justify-content-center align-items-center gap-3 my-4">
+            <div class="d-flex justify-content-center align-items-center gap-3 my-5">
 
-                <input class="form-control" id="palindrome-input" type="text">
-                <button class="btn btn-secondary px-4" id="palindrome-check">check</button>
+                <input class="form-control" id="palindrome-input" type="text" placeholder="Enter word to check">
+                <button class="btn btn-secondary px-4" id="palindrome-check">Check</button>
 
             </div>
 
             <h2 class="display-6 text-center" id="palindrome-result">Result</h2>
+
+        </div>
+
+        <!-- Odd Even Game -->
+        <div class="container rounded-5 p-5 my-5 shadow">
+
+            <h1 class="display-6 text-uppercase text-center">Odd Even Game</h1>
+
+            <div class="d-flex justify-content-center align-items-center gap-3 my-5">
+
+                <input class="form-control" id="user-number-input" type="text" placeholder="Enter number between 1 and 5 to play">
+                <select class="form-select" id="user-odd-even-select">
+                    <option value="1">odd</option>
+                    <option value="0">even</option>
+                </select>
+                <input class="form-control bg-white" id="computer-number-form" type="text" placeholder="CPU Number" disabled>
+                <button class="btn btn-secondary px-4" id="odd-even-check">Play</button>
+
+            </div>
+
+            <h2 class="display-6 text-center" id="odd-even-result">Result</h2>
 
         </div>
 
